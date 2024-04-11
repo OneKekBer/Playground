@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using static Auth.Program;
 
 
 
-namespace Auth { 
+
+namespace Project.auth
+{
 
     public class Program()
     {
@@ -23,7 +24,7 @@ namespace Auth {
         {
             TransferMoney = 0,
         }
-       
+
         public enum EnumActions
         {
             LogIn = 0,
@@ -34,7 +35,7 @@ namespace Auth {
             GetAccountInfo = 5,
         }
 
-        
+
 
         public static string Input(EnumInput type)
         {
@@ -47,11 +48,11 @@ namespace Auth {
         public static class State
         {
             public static Account currentProfile;
-       
+
         }
 
 
-        
+
         public static class DataBase
         {
             //its ok while thats db contain only password and login 
@@ -63,7 +64,7 @@ namespace Auth {
             {
                 int i = 0;
                 foreach (var account in accounts)
-                { 
+                {
                     Console.WriteLine($"{i} : {account.Login}");
                     i++;
                 }
@@ -96,12 +97,12 @@ namespace Auth {
                         return account;
                     }
                 }
-             
+
                 return null;
             }
         }
 
-        
+
 
         public class Account // This class looks like copy/pasted from different language
         {
@@ -142,7 +143,7 @@ namespace Auth {
             }
         }
 
-        public 
+        public
 
         static void ChooseAction(EnumActions userAction)
         {
@@ -152,11 +153,11 @@ namespace Auth {
             switch (userAction)
             {
                 case EnumActions.LogIn:
-                    
+
                     loginUserInput = Input(EnumInput.Login);
 
                     Account profile = DataBase.FindUserByLogin(loginUserInput);
-                    if(profile == null)
+                    if (profile == null)
                     {
                         Console.WriteLine($"There is no user with login {loginUserInput}");
                         break;
@@ -171,19 +172,19 @@ namespace Auth {
                         break;
                     }
                     State.currentProfile = profile;
-                    
+
                     Console.WriteLine($"Welcome {loginUserInput}");
                     break;
 
 
                 case EnumActions.ChangePassword:
-                    if(State.currentProfile == null)
+                    if (State.currentProfile == null)
                     {
                         Console.WriteLine("You need to be loggedin to change password");
                         break;
                     }
 
-                    
+
                     passwordUserInput = Input(EnumInput.Password);
 
                     State.currentProfile.UpdatePassword(passwordUserInput);
@@ -194,7 +195,7 @@ namespace Auth {
 
                 case EnumActions.Register:
                     loginUserInput = Input(EnumInput.Login);
-                    bool isLoginAlreadyUsed =  DataBase.IsLoginAlreadyUsed(loginUserInput);
+                    bool isLoginAlreadyUsed = DataBase.IsLoginAlreadyUsed(loginUserInput);
                     if (isLoginAlreadyUsed)
                     {
                         Console.WriteLine("This login already used");
@@ -205,7 +206,7 @@ namespace Auth {
                     Account user = new Account(loginUserInput);
                     user.UpdatePassword(passwordUserInput);
 
-                    
+
                     Console.WriteLine("You have been registered");
 
                     DataBase.AddNewAccount(user);
@@ -220,7 +221,7 @@ namespace Auth {
 
 
                 case EnumActions.GetAllUsers:
-                    if(State.currentProfile == null)
+                    if (State.currentProfile == null)
                     {
                         Console.WriteLine("You need to be loged in");
                         break;
@@ -253,8 +254,8 @@ namespace Auth {
             Console.Write("choose action: ");
             int i = 0;
             foreach (EnumActions action in Enum.GetValues<EnumActions>()) // Could be decomposed (moved to a separate method like PrintActions()
-            { 
-                
+            {
+
                 Console.Write($"{i} : {action} / ");
                 i += 1;
 
@@ -280,7 +281,7 @@ namespace Auth {
             Console.WriteLine((int)EnumActions.Register);
 
             while (true)
-            { 
+            {
 
                 PrintActions();
             }
@@ -290,6 +291,6 @@ namespace Auth {
 
 
     }//class
-   }//namespace
-    
+}//namespace
+
 

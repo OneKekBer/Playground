@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Dice
+namespace Project.dice
 {
     class Player
     {
@@ -22,18 +22,18 @@ namespace Dice
 
     public class Program
     {
-       
+
         public static void Dice()
         {
             int money = 10;
-            Random random = new Random(); 
+            Random random = new Random();
 
-            while (money > 0) 
+            while (money > 0)
             {
 
                 // Roll player's dice
 
-                Player user = new (getRandomNum(), getRandomNum());
+                Player user = new(getRandomNum(), getRandomNum());
                 int playerSum = user.GetSum();
 
                 // Roll computer's dice
@@ -41,7 +41,7 @@ namespace Dice
                 Player computer = new Player(getRandomNum(), getRandomNum());
                 int computerSum = computer.GetSum();
 
-               
+
                 Console.WriteLine($"Your Dice: {user.First} and {user.Second}");
                 Console.WriteLine($"Computer's Dice: {computer.First} and {computer.Second}");
 
