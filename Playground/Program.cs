@@ -9,6 +9,7 @@ using System.Text;
 
 
 
+
 namespace MainVV
 {
 
@@ -21,7 +22,7 @@ namespace MainVV
             Console.OutputEncoding = Encoding.UTF8;
 
 
-            int currPage = 2;
+            int currPage = 4;
 
             switch (currPage)
             {
@@ -30,6 +31,26 @@ namespace MainVV
                     break;
                 case 2:
                     Playground.events.Program.Start();
+                    break;
+                case 3:
+                    Playground.apf.Program.Start();
+                    break;
+                case 4:
+                    Playground.closure.Program.Start();
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:   
                     break;
                 default:
                     break;
