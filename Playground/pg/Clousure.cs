@@ -43,10 +43,17 @@ namespace Playground.closure
 
 
 
+
+            //Func<int, int> factorial = null;
+
+            //factorial = (n) => n == 0 ? 1 : n * factorial(n - 1);
+
+            //Console.WriteLine(factorial(5)); // Выведет 120 (факториал числа 5)
+
+            //Console.ReadKey();
+
+
             
-
-
-            Console.ReadKey();
         }
 
         // let s = 1
