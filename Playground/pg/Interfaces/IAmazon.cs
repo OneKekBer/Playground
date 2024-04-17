@@ -91,7 +91,7 @@ namespace Playground.pg.inter.amazon
             int i = 1;
             foreach (var order in orderList)
             {
-                Console.WriteLine($"{i++}. ID:{order.ID}  Total cost:{order.totalCost}");
+                Console.WriteLine($"{i++}. ID:{order.ID}  Total cost:{order.totalCost} ");
             }
         }
 
