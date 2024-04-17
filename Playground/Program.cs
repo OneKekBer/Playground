@@ -22,7 +22,7 @@ namespace MainVV
             Console.OutputEncoding = Encoding.UTF8;
 
 
-            int currPage = 5;
+            int currPage = 7;
 
             switch (currPage)
             {
@@ -39,11 +39,13 @@ namespace MainVV
                     Playground.closure.Program.Start();
                     break;
                 case 5:
-                    Playground.interfaces.Program.Start();
+                    Playground.pg.inter.Interfaces.Program.Start();
                     break;
                 case 6:
+                    Playground.generics.Program.Start();
                     break;
                 case 7:
+                    Playground.pg.inter.amazon.Program.Start();
                     break;
                 case 8:
                     break;
