@@ -25,10 +25,26 @@ namespace Playground.pg.inter.IComparable
         }
     }
 
+    public class HumanComparer : IComparer<Human>
+    {
+        int IComparer<Human>.Compare(Human? x, Human? y)
+        {
+            if(x == null || y == null) return 1;
+
+            if (x.age < y.age) 
+                return 1;
+            if(x.age > y.age)
+                return -1;
+            return 0;
+        }
+    }
+
     internal interface Program
     {
         public static void Start()
         {
+            HumanComparer humanComparer = new HumanComparer();
+
             Human tom = new Human("Tom", 22);
             Human ben = new Human("Ben", 31);
             Human jerry = new Human("Jerry", 18);
@@ -36,7 +52,7 @@ namespace Playground.pg.inter.IComparable
 
             Human[] arr = new Human[] { tom, ben, jerry, ilja };
 
-            Array.Sort(arr);
+            Array.Sort(arr, humanComparer);
 
             foreach (var human in arr)
             {
