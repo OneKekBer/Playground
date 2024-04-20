@@ -225,7 +225,7 @@ namespace Playground.pg.inter.korvariant
             //Apple apple = bagOfFruit.OpenBag();
             //Console.WriteLine(apple.GetType().Name);
 
-            //covariant
+            //covariant 
             //IBag<Fruit> bagOfFruit2 = new BagOfApples();
             //Fruit fruit = bagOfFruit2.OpenBag();
             //Console.WriteLine(fruit.GetType().Name);
