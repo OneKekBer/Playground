@@ -7,6 +7,17 @@ using System.Threading.Tasks;
 namespace Playground.pg._8.indexator
 {
 
+    public interface IClass
+    {
+        public int this[int x]
+        {
+            get
+            {
+                return 0;
+            }
+        }
+    }
+
     //test1
     class Product
     {
@@ -78,9 +89,70 @@ namespace Playground.pg._8.indexator
             //}
             get
             {
-                
+                if(index >= 0 && index <= teamList.Length)
+                {
+                    return teamList[index];
+                }
+                return null;
             }
         }
+    }
+
+
+    //test3
+
+
+    class Word
+    {
+        public string Source { get; }
+        public string Target { get; set; }
+        public Word(string source, string target)
+        {
+            Source = source;
+            Target = target;
+        }
+    }
+    class Dictionary
+    {
+        Word[] words;
+        public Dictionary()
+        {
+            words = new Word[]
+            {
+            new Word("red", "красный"),
+            new Word("blue", "синий"),
+            new Word("green", "зеленый")
+            };
+        }
+
+        public Word this[string word]
+        {
+            get
+            {
+                foreach (Word item in words)
+                {
+                    if(item.Source == word)
+                    {
+                        return item;
+                    }
+                }
+                return null;
+            }
+
+            set
+            {
+                foreach (Word item in words)
+                {
+                    if (item.Source == word)
+                    {
+                        item.Target = word;
+                    }
+                }
+            }
+        }
+
+        
+
     }
 
     internal class Program
@@ -102,7 +174,7 @@ namespace Playground.pg._8.indexator
         {
             Team team = new Team(new Zawdonik[] { new Zawdonik("messi", 11), new Zawdonik("ronaldo", 5), new Zawdonik("lewandowski", 12) });
 
-            Zawdonik zaw = team[2];
+            Zawdonik zaw = team[200];
 
             Console.WriteLine(zaw != null ? zaw.Name : "There is no zawodnik with this index...");
 
@@ -112,13 +184,15 @@ namespace Playground.pg._8.indexator
 
         public static void Test3()
         {
+            Dictionary dick = new Dictionary();
 
+            Console.WriteLine(dick["blue"].Target);
         }
 
         public static void Start() 
         {
-            Test2();
-
+            //Test2();
+            Test3();
         }
 
     }
