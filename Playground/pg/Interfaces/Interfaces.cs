@@ -202,6 +202,9 @@ namespace Playground.pg.inter.Interfaces
 
 
 
+
+
+
     
 
 
@@ -244,6 +247,14 @@ namespace Playground.pg.inter.Interfaces
 
         }
 
+        public static void PrintArray<T>(IList<T> arr)
+        {
+            foreach(var item in arr)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         public static void Test3()
         {
             Messenger<Message> tg = new Messenger<Message>();
@@ -255,16 +266,28 @@ namespace Playground.pg.inter.Interfaces
 
         public static void Test4()
         {
+            int[] arr = { 1, 2, 4, 4, 5, 6, 7, 8 };
+
             
+            PrintArray(arr);
+
+            string[] arr2 = { "sdaf", "fsafa" };
+
+            PrintArray(arr2);
+
+
+            List<int> list = new List<int>() { 412, 41, 6432, 231 };
+
+            PrintArray(list);
 
         }
 
 
         public static void Start()
         {
-            Test1();
-            Test2();
-            Test3();
+            //Test1();
+            //Test2();
+            //Test3();
             Test4();
 
         }
