@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 16;
+            int currPage = 17;
 
             switch (currPage)
             {
@@ -74,6 +74,7 @@ namespace MainVV
                     Playground.pg.del.delegat.Program.Start();
                     break;
                 case 17:
+                    Playground.pg._8.part.Program.Start();
                     break;
                 case 18:
                     break;
