@@ -43,9 +43,8 @@ namespace Playground.pg.inter.iclone
     {
         public static void Start()
         {
-            Human Tate = new Human("tate", 24, new Work("microsoft", 100000));
+            Human Tate = new Human("tate", 24, new Work("microsoft", 21));
             //Human Tate = new Human("tate", 24);
-
 
             var Bob = (Human)Tate.Clone();
 
@@ -58,9 +57,6 @@ namespace Playground.pg.inter.iclone
 
             Console.WriteLine(Tate.work.name);
             Console.WriteLine(Bob.work.name);
-
-
         }
-
     }
 }

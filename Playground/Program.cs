@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 20;
+            int currPage = 22;
 
             switch (currPage)
             {
@@ -86,8 +86,10 @@ namespace MainVV
                     Playground.pg._9_pattern_matching.type.Program.Start();
                     break;
                 case 21:
+                    Playground.pg.Interfaces.pract.Program.Start();
                     break;
                 case 22:
+                    Playground.pg._9_pattern_matching.prop.Program.Start();
                     break;
                 case 23:
                     break;
