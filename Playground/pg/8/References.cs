@@ -50,7 +50,28 @@ namespace Playground.pg._8.reference
 
             CoolMethod(ref y);
 
-            Console.WriteLine(y);
+            Console.WriteLine(y); // 1000000000
+
+            Console.WriteLine("-----");
+
+            int x = 31;
+
+            ref int refrence = ref x;
+
+            Console.WriteLine(refrence); // 31
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
     }

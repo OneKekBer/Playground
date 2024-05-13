@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 27;
+            int currPage = 14;
 
             switch (currPage)
             {
@@ -107,6 +107,7 @@ namespace MainVV
                     Playground.pg._10_collections.list.Program.Start();
                     break;
                 case 28:
+                    Playground.pg.structs.Praogram.Start();
                     break;
                 case 29:
                     break;

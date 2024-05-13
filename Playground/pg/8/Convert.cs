@@ -43,6 +43,8 @@ namespace Playground.pg._8.convert
 
     //test3
 
+    
+
     class Celcius
     {
         public double Gradus { get; set; }
@@ -63,7 +65,7 @@ namespace Playground.pg._8.convert
         public double Gradus { get; set; }
 
     }
-
+    
 
     internal class Program
     {
@@ -72,6 +74,8 @@ namespace Playground.pg._8.convert
             Celcius cel = new Celcius() { Gradus = 36 };
 
             var far = (Fahrenheit)cel;
+
+            
 
             Console.WriteLine(far.Gradus);
 
