@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 35;
+            int currPage = 36;
 
             switch (currPage)
             {
@@ -131,6 +131,7 @@ namespace MainVV
                     Playground.projects.Threading.factorial.Program.Start();
                     break;
                 case 36:
+                    Playground.pg._14_MultiThreading.locks.Program.Start();
                     break;
                 case 37:
                     break;
