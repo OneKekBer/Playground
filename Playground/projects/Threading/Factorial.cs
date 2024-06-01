@@ -10,9 +10,10 @@ namespace Playground.projects.Threading.factorial
 {
     internal class Program
     {
-        public static int FindFactorial(int x, int sum = 1)
+        object locker = new object();
+        public static decimal FindFactorial(int x, decimal sum = 1)
         {
-            if (x == 0) return sum;
+            if (x == 1) return sum;
             sum *= x;
             return FindFactorial(x - 1, sum);
         }
@@ -29,7 +30,6 @@ namespace Playground.projects.Threading.factorial
             foreach (var item in values)
             {
                 Thread thread = new Thread(() => OneThread(item));
-                Thread.Sleep(item * 10);
                 thread.Start();
             }
         }
@@ -50,9 +50,15 @@ namespace Playground.projects.Threading.factorial
 
             string[] arr = str.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var list = from i in arr
-                       where int.TryParse(i, out int res)
-                       select int.Parse(i);
+            //var list = from i in arr
+            //           where int.TryParse(i, out int _)
+            //           select int.Parse(i);
+
+            var list = arr
+                .Where(x => int.TryParse(x, out int _))
+                .Select(x => int.Parse(x));
+
+            
 
             return list;
         }
