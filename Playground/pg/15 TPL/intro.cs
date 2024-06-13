@@ -89,7 +89,7 @@ namespace Playground.pg._15_TPL.intro
                     Console.WriteLine("inner end");
                     task2.Start();
                     task1.Wait();
-                });
+                }, TaskCreationOptions.AttachedToParent);
                 Console.WriteLine("outer end");
             });
             Console.WriteLine("end main");
