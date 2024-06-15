@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 42;
+            int currPage = 43;
 
             switch (currPage)
             {
@@ -152,7 +152,8 @@ namespace MainVV
                     Playground.projects.Threading.tplmatrix.Program.Start();
                     break;
                 case 43:
-                    break;
+                    Playground.pg._15_TPL.parallel.Program.Start(); 
+                break;
                 case 44:
                     break;
                 case 45:
