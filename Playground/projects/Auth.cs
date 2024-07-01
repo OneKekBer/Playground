@@ -51,8 +51,6 @@ namespace Project.auth
 
         }
 
-
-
         public static class DataBase
         {
             //its ok while thats db contain only password and login 

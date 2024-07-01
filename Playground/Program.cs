@@ -21,7 +21,7 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 43;
+            int currPage = 47;
 
             switch (currPage)
             {
@@ -155,12 +155,16 @@ namespace MainVV
                     Playground.pg._15_TPL.parallel.Program.Start(); 
                 break;
                 case 44:
+                    Playground.pg._16_Async.intro.Program.Start();
                     break;
                 case 45:
+                    Playground.pg._16_Async.when.Program.Start();
                     break;
                 case 46:
+                    Playground.pg._17_LINQ.bookmate.Program.Start();
                     break;
                 case 47:
+                    Playground.pg._17_LINQ.group.Program.Start();
                     break;
                 case 48:
                     break;
@@ -173,6 +177,146 @@ namespace MainVV
                 case 52:
                     break;
                 case 53:
+                    break;
+                case 54:
+                    break;
+                case 55:
+                    break;
+                case 56:
+                    break;
+                case 57:
+                    break;
+                case 58:
+                    break;
+                case 59:
+                    break;
+                case 60:
+                    break;
+                case 61:
+                    break;
+                case 62:
+                    break;
+                case 63:
+                    break;
+                case 64:
+                    break;
+                case 65:
+                    break;
+                case 66:
+                    break;
+                case 67:
+                    break;
+                case 68:
+                    break;
+                case 69:
+                    break;
+                case 70:
+                    break;
+                case 71:
+                    break;
+                case 72:
+                    break;
+                case 73:
+                    break;
+                case 74:
+                    break;
+                case 75:
+                    break;
+                case 76:
+                    break;
+                case 77:
+                    break;
+                case 78:
+                    break;
+                case 79:
+                    break;
+                case 80:
+                    break;
+                case 81:
+                    break;
+                case 82:
+                    break;
+                case 83:
+                    break;
+                case 84:
+                    break;
+                case 85:
+                    break;
+                case 86:
+                    break;
+                case 87:
+                    break;
+                case 88:
+                    break;
+                case 89:
+                    break;
+                case 90:
+                    break;
+                case 91:
+                    break;
+                case 92:
+                    break;
+                case 93:
+                    break;
+                case 94:
+                    break;
+                case 95:
+                    break;
+                case 96:
+                    break;
+                case 97:
+                    break;
+                case 98:
+                    break;
+                case 99:
+                    break;
+                case 100:
+                    break;
+                case 101:
+                    break;
+                case 102:
+                    break;
+                case 103:
+                    break;
+                case 104:
+                    break;
+                case 105:
+                    break;
+                case 106:
+                    break;
+                case 107:
+                    break;
+                case 108:
+                    break;
+                case 109:
+                    break;
+                case 110:
+                    break;
+                case 111:
+                    break;
+                case 112:
+                    break;
+                case 113:
+                    break;
+                case 114:
+                    break;
+                case 115:
+                    break;
+                case 116:
+                    break;
+                case 117:
+                    break;
+                case 118:
+                    break;
+                case 119:
+                    break;
+                case 120:
+                    break;
+                case 121:
+                    break;
+                case 122:
+                    break;
+                case 123:
                     break;
                 default:
                     break;
