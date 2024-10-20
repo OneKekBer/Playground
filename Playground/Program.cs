@@ -5,6 +5,7 @@
 //using FightClub;
 //using TestNamespace;
 using Playground.lambda;
+using Playground.projects;
 using System.Text;
 
 
@@ -21,8 +22,8 @@ namespace MainVV
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            int currPage = 47;
-
+            int currPage = 56;
+                
             switch (currPage)
             {
                 case 1:
@@ -167,22 +168,31 @@ namespace MainVV
                     Playground.pg._17_LINQ.group.Program.Start();
                     break;
                 case 48:
+                    Playground.projects.binary.Program.Start();
                     break;
                 case 49:
+                    Playground.projects.findstringmethod.Program.Start();
                     break;
                 case 50:
+                    Playground.SumFourDivisorsLeetCode.Program.Start();
                     break;
                 case 51:
+                    Playground.projects.LinkedList.AddToNumbers.Start();
                     break;
                 case 52:
+                    Playground.projects.Leetcode.WaterContainer.Start();
                     break;
                 case 53:
+                    Playground.projects.Leetcode.SlidingWindow.Start();
                     break;
                 case 54:
+                    Playground.pg.Reflection.Program.Start();
                     break;
                 case 55:
+                    Playground.pg.Reflection.Reflect.Program.Start();
                     break;
                 case 56:
+                    Playground.projects.ExtensionsMethods.Program.Start();
                     break;
                 case 57:
                     break;

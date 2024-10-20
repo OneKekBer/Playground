@@ -101,7 +101,7 @@ namespace Playground.pg._10_collections.linkedlist
     {
         public static void Start()
         {
-            LinkedList<string> linkedList = new LinkedList<string>();
+            var linkedList = new LinkedList<string>();
 
             linkedList.Add("string");
             linkedList.Add("integer");

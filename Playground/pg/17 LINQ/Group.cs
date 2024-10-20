@@ -12,6 +12,17 @@ namespace Playground.pg._17_LINQ.group
     {
         public static void Start()
         {
+            try
+            {
+                throw new Exception("");
+                throw new Exception("");
+
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Person[] people =
             {
                 new Person("Tom", "Microsoft"),
